@@ -1,3 +1,5 @@
+[B]2.3.6.1[/B]
+- Poprawka: ogólne po zmianach na filmweb.pl (tytuł, rok, poster)
 [B]2.3.6[/B]
 - Poprawka: nowa wyszukiwarka
 - Poprawka: dopasowanie to scrapera TMDb
