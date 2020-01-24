@@ -1,5 +1,9 @@
-[B]2.3.6.1[/B]
-- Poprawka: ogólne po zmianach na filmweb.pl (tytuł, rok, poster)
+[B]2.3.7[/B]
+- Poprawka: nowa wyszukiwarka
+- Poprawka: informacje o filmie, poster Filmweb
+- Usunięto: Alternatywna wyszukiwarka
+- Usunięto: wyszukiwanie muzyka
+- Usunięto: DVDplot
 [B]2.3.6[/B]
 - Poprawka: nowa wyszukiwarka
 - Poprawka: dopasowanie to scrapera TMDb
