@@ -274,9 +274,12 @@
                     <expression clear="yes">(.+)</expression>
                 </RegExp>
                 <!-- FILMWEB STUDIO !-->
-                <RegExp input="$$1" output="&lt;studio&gt;\4&lt;/studio&gt;" dest="6">
-                    <expression fixchars="4">&gt;studio.+?filmInfo__info&quot;&gt;([^&gt;]+)&lt;</expression>
+                <RegExp input="$$1" output="&lt;studio&gt;\1&lt;/studio&gt;" dest="6">
+                    <expression clear="yes">&gt;studio.+?filmInfo__info&quot;&gt;(.*?)&lt;div class=&quot;filmInfo__group&quot;&gt;</expression>
                 </RegExp>
+                <RegExp input="$$1" output="&lt;studio&gt;\1&lt;/studio&gt;" dest="6">
+                    <expression>&gt;studio.+?filmInfo__info&quot;&gt;(.*?) \/ &lt;a href</expression>
+                </RegExp>                
                 <expression noclean="1">(.+)</expression>
             </RegExp>
             
