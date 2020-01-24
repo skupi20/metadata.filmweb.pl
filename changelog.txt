@@ -4,6 +4,7 @@
 - Usunięto: Alternatywna wyszukiwarka
 - Usunięto: wyszukiwanie muzyka
 - Usunięto: DVDplot
+- Do poprawienia: fanart Filmweb
 [B]2.3.6[/B]
 - Poprawka: nowa wyszukiwarka
 - Poprawka: dopasowanie to scrapera TMDb
