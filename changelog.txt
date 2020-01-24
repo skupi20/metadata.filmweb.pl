@@ -1,3 +1,6 @@
+[B]2.3.8[/B]
+- Poprawka: wytwórnia Filmweb
+- Poprawka: poprawienie kodowania (inne języki) dla danych w których mogą występować
 [B]2.3.7[/B]
 - Poprawka: nowa wyszukiwarka
 - Poprawka: informacje o filmie, poster Filmweb
