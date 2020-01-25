@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <strings>
-    <string id="30000">Pobieraj Trailer</string>
-    <string id="30003">Pobieraj również okładki z TMDb</string>
+    <string id="30000">Pobieraj Trailer</string>    
+    <string id="30002">Pobiera aktorów z TMDb</string>
+    <string id="30003">Pobieraj dodatkową okładkę z TMDb</string>
     <string id="30004">Przeszukaj wszystkie pliki NFO</string>
 </strings>
