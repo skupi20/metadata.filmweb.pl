@@ -14,8 +14,8 @@
     <extension point="xbmc.addon.metadata">
         <summary lang="en">Filmweb Movie Scraper</summary>
         <summary lang="pl">Scraper filmowy Filmweb.pl</summary>
-        <description lang="en">Download Movie information from www.filmweb.pl</description>
-        <description lang="pl">Pobiera informacje o filmie ze strony www.filmweb.pl</description>
+        <description lang="en">Download Movie information from www.filmweb.pl with help of TMDb</description>
+        <description lang="pl">Pobiera informacje o filmie ze strony www.filmweb.pl z pomocą TMDb</description>
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
         <source>https://github.com/skupi20/metadata.filmweb.pl</source>
