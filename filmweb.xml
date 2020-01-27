@@ -217,7 +217,7 @@
                 <!-- FILMWEB DIRECTOR !-->
                 <RegExp input="$$7" output="&lt;director&gt;\1&lt;/director&gt;" dest="6">
                     <RegExp input="$$1" output="\1" dest="7">
-                        <expression noclean="1" clear="yes">&gt;reżyseria(.*?)&gt;scenariusz</expression>
+                        <expression noclean="1" clear="yes">&gt;reżyseria&lt;(.*?)&gt;scenariusz&lt;</expression>
                     </RegExp>
                     <expression repeat="yes" fixchars="1">&quot;name&quot;&gt;([^&lt;]+)</expression>
                 </RegExp>
@@ -233,7 +233,7 @@
                 <!-- FILMWEB WRITER !-->
                 <RegExp input="$$7" output="&lt;credits&gt;\1&lt;/credits&gt;" dest="6">
                     <RegExp input="$$1" output="\1" dest="7">
-                        <expression noclean="1" clear="yes">&gt;scenariusz(.*?)&gt;gatunek</expression>
+                        <expression noclean="1" clear="yes">&gt;scenariusz&lt;(.*?)&gt;gatunek&lt;</expression>
                     </RegExp>
                     <expression repeat="yes" fixchars="1">&quot;name&quot;&gt;([^&lt;]+)</expression>
                 </RegExp>
@@ -250,7 +250,7 @@
                 <!-- FILMWEB GENRES !-->
                 <RegExp input="$$7" output="&lt;genre&gt;\1&lt;/genre&gt;" dest="6">
                     <RegExp input="$$1" output="\1" dest="7">
-                        <expression noclean="1" clear="yes">gatunek(.*?)&gt;produkcja</expression>
+                        <expression noclean="1" clear="yes">&gt;gatunek&lt;(.*?)&gt;produkcja&lt;</expression>
                     </RegExp>
                     <expression repeat="yes" fixchars="1">&lt;a href=&quot;\/films\/search\?genres=\d+&quot;&gt;(.*?)&lt;</expression>
                 </RegExp>
@@ -300,7 +300,7 @@
                 <!-- FILMWEB COUNTRY !-->
                 <RegExp input="$$7" output="&lt;country&gt;\1&lt;/country&gt;" dest="6">
                     <RegExp input="$$1" output="\1" dest="7">
-                        <expression noclean="1" clear="yes">produkcja(.*?)&gt;premiera</expression>
+                        <expression noclean="1" clear="yes">&gt;produkcja&lt;(.*?)&gt;premiera&lt;</expression>
                     </RegExp>
                     <expression repeat="yes" fixchars="1">&gt;([^&lt;]+)&lt;\/a</expression>
                 </RegExp>
