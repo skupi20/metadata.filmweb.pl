@@ -1,3 +1,5 @@
+[B]2.3.9+[/B]
+- Dodanie poprawek reggs 2.4
 [B]2.3.9[/B]
 - Poprawka: dla aktorów Filmweb, opcja aktorzy TMDb
 - Poprawka: gatunki, opis TMDb, etykiety, kraj, FANART
