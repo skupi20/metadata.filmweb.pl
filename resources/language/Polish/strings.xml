@@ -5,6 +5,7 @@
     <string id="30005">Pobiera dodatkowe plakaty z TMDb</string>
     <string id="30006">Pobiera dodatkowe plakaty z Filmweb</string>
     <string id="30008">Pobiera aktorów z TMDb</string>
+    <string id="30009">Pobiera wytwórnie z TMDb</string>
     <string id="30011">Przeszukaj wszystkie pliki NFO</string>
     <string id="30012">Alternatywna wyszukiwarka</string>
 </strings>
