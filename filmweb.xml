@@ -225,7 +225,7 @@
                         <expression clear="yes" fixchars="1">review__title[^&gt;]+&gt;[^&gt;]+&gt;([^&lt;]+)&lt;</expression>
                     </RegExp>                    
                     <RegExp input="$$1" output="\1" dest="7">
-                        <expression clear="yes" fixchars="1">reviewBox__title[^&gt;]+&gt;([^&lt;]+)</expression>
+                        <expression fixchars="1">reviewBox__title[^&gt;]+&gt;([^&lt;]+)</expression>
                     </RegExp>
                     <expression>(.+)</expression>
                 </RegExp>
