@@ -52,7 +52,10 @@
             <!-- FILMWEB ID !-->
             <RegExp input="$$20" output="&lt;id_filmweb&gt;\1&lt;/id_filmweb&gt;" dest="5">
                 <RegExp input="$$1" output="\1" dest="20">
-                    <expression>sasKeywordAdd\(&quot;filmId&quot;,([1-9][0-9]*)\)</expression>
+                    <expression>sasKeywordAdd\(&quot;filmId&quot;,([0-9]*)\)</expression>
+                </RegExp>
+                <RegExp input="$$1" output="\1" dest="20">
+                    <expression>filmDataBasic&quot;&gt;{&quot;id&quot;:([0-9]*),</expression>
                 </RegExp>
                 <expression />
             </RegExp>
@@ -65,7 +68,7 @@
             <!-- TITLE !-->
             <RegExp input="$$6" output="\1" dest="5+">
                 <RegExp input="$$1" output="\1" dest="17">
-                    <expression fixchars="1" clear="yes">&quot;&gt;([^&lt;]+)&lt;\/a&gt;&lt;\/h1&gt;</expression>
+                    <expression fixchars="1" clear="yes">filmCoverSection__title[^&lt;]+[^&gt;]+&gt;([^&lt;]+)&lt;</expression>
                 </RegExp>
                 <RegExp conditional="!UseOriginalTitle" input="$$17" output="&lt;title&gt;\1&lt;/title&gt;" dest="6">
                     <expression />
@@ -82,7 +85,7 @@
                     <expression />
                 </RegExp>
                 <RegExp input="$$1" output="\1" dest="16">
-                    <expression fixchars="1">orginalTitle&quot;&gt;([^&lt;]+)&lt;\/h2&gt;</expression>
+                    <expression fixchars="1">filmCoverSection__orginalTitle&quot;&gt;([^&lt;]+)&lt;</expression>
                 </RegExp>
                 <RegExp conditional="!UseOriginalTitle" input="$$16" output="&lt;originaltitle&gt;\1&lt;/originaltitle&gt;" dest="6">
                     <expression />
@@ -96,7 +99,7 @@
             <!-- YEAR !-->
             <RegExp input="$$15" output="&lt;year&gt;\1&lt;/year&gt;" dest="5+">
                 <RegExp input="$$1" output="\1" dest="15">
-                    <expression>sasKeywordAdd\(&quot;filmYear&quot;,&quot;([0-9]*)&quot;\)</expression>
+                    <expression>filmCoverSection__year&quot;&gt;([0-9]*)&lt;</expression>
                 </RegExp>
                 <expression />
             </RegExp>
@@ -171,11 +174,8 @@
                     <expression clear="yes">(.+)</expression>
                 </RegExp>
                 <!-- FILMWEB DIRECTOR !-->
-                <RegExp input="$$7" output="&lt;director&gt;\1&lt;/director&gt;" dest="6">
-                    <RegExp input="$$1" output="\1" dest="7">
-                        <expression noclean="1" clear="yes">&gt;reżyseria&lt;(.*?)&gt;scenariusz&lt;</expression>
-                    </RegExp>
-                    <expression repeat="yes" fixchars="1">&quot;name&quot;&gt;([^&lt;]+)</expression>
+                <RegExp input="$$1" output="&lt;director&gt;\1&lt;/director&gt;" dest="6">
+                    <expression repeat="yes" fixchars="1">title=&quot;([^&quot;]+)&quot; itemprop=&quot;director&quot;</expression>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
             </RegExp>
@@ -187,11 +187,8 @@
                     <expression clear="yes">(.+)</expression>
                 </RegExp>
                 <!-- FILMWEB WRITER !-->
-                <RegExp input="$$7" output="&lt;credits&gt;\1&lt;/credits&gt;" dest="6">
-                    <RegExp input="$$1" output="\1" dest="7">
-                        <expression noclean="1" clear="yes">&gt;scenariusz&lt;(.*?)&gt;gatunek&lt;</expression>
-                    </RegExp>
-                    <expression repeat="yes" fixchars="1">&quot;name&quot;&gt;([^&lt;]+)</expression>
+                <RegExp input="$$1" output="&lt;credits&gt;\1&lt;/credits&gt;" dest="6">
+                    <expression repeat="yes" fixchars="1">title=&quot;([^&quot;]+)&quot; itemprop=&quot;creator&quot;</expression>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
             </RegExp>
@@ -204,11 +201,8 @@
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
                 <!-- FILMWEB GENRES !-->
-                <RegExp input="$$7" output="&lt;genre&gt;\1&lt;/genre&gt;" dest="6">
-                    <RegExp input="$$1" output="\1" dest="7">
-                        <expression noclean="1" clear="yes">&gt;gatunek&lt;(.*?)&gt;produkcja&lt;</expression>
-                    </RegExp>
-                    <expression repeat="yes" fixchars="1">&lt;a href=&quot;\/films\/search\?genres=\d+&quot;&gt;(.*?)&lt;</expression>
+                <RegExp input="$$1" output="&lt;genre&gt;\1&lt;/genre&gt;" dest="6">
+                    <expression repeat="yes" fixchars="1">genres=\d+&quot;&gt;([^&lt;]+)&lt;</expression>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
             </RegExp>
@@ -225,7 +219,7 @@
                         <expression clear="yes" fixchars="1">review__title[^&gt;]+&gt;[^&gt;]+&gt;([^&lt;]+)&lt;</expression>
                     </RegExp>                    
                     <RegExp input="$$1" output="\1" dest="7">
-                        <expression fixchars="1">reviewBox__title[^&gt;]+&gt;([^&lt;]+)</expression>
+                        <expression fixchars="1">reviewBox__title[^&gt;]+&gt;([^&lt;]+)&lt;</expression>
                     </RegExp>
                     <expression>(.+)</expression>
                 </RegExp>
@@ -273,11 +267,8 @@
                     <expression clear="yes">(.+)</expression>
                 </RegExp>
                 <!-- FILMWEB COUNTRY !-->
-                <RegExp input="$$7" output="&lt;country&gt;\1&lt;/country&gt;" dest="6">
-                    <RegExp input="$$1" output="\1" dest="7">
-                        <expression noclean="1" clear="yes">&gt;produkcja&lt;(.*?)&gt;premiera&lt;</expression>
-                    </RegExp>
-                    <expression repeat="yes" fixchars="1">&gt;([^&lt;]+)&lt;\/a</expression>
+                <RegExp input="$$1" output="&lt;country&gt;\1&lt;/country&gt;" dest="6">
+                    <expression repeat="yes" fixchars="1">countries=\d+&quot;&gt;([^&lt;]+)&lt;</expression>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
             </RegExp>

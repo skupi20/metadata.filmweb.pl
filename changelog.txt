@@ -1,3 +1,7 @@
+[B]2.4.2[/B]
+- Poprawka: wszystkie string
+[B]2.4.1[/B]
+- Poprawka: slogan/tagline
 [B]2.4.0[/B]
 - Dodanie poprawek reggs 2.4
 - Dodano: wybór wytwórni TMDb albo Filmweb
