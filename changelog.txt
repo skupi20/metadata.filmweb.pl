@@ -1,5 +1,6 @@
 [B]2.4.2[/B]
 - Poprawka: wszystkie string
+- Poprawka: aktorzy
 [B]2.4.1[/B]
 - Poprawka: slogan/tagline
 [B]2.4.0[/B]
