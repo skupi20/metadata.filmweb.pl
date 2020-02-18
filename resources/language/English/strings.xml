@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <strings>
     <string id="30001">Get Trailer</string>
+    <string id="30002">Get full Cast from Filmweb</string>
     <string id="30004">Use Original Title</string>
     <string id="30005">Additional thumbs from TMDb</string>
     <string id="30006">Additional thumbs from Filmweb</string>
-    <string id="30008">Get actors from TMDb</string>
     <string id="30009">Get studio from TMDb</string>
     <string id="30011">Search all NFO's</string>
     <string id="30012">Alternative search engine</string>
