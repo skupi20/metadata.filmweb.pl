@@ -1,3 +1,6 @@
+[B]2.4.4[/B]
+- Poprawka: plakaty z Filmweb
+- Poprawka: dodatkowy fanart z Filmweb
 [B]2.4.3[/B]
 - Poprawka: pełna obsada Filmweb
 - Usunięto: opcja aktorzy z TMDb
