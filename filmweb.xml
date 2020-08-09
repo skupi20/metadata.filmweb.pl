@@ -22,7 +22,7 @@
     
     <!-- Tworzy adres URL wyszukiwania !-->
     <CreateSearchUrl dest="3">
-        <RegExp conditional="!SearchAlt" input="$$1" output="&lt;url&gt;http://www.filmweb.pl/films/search?q=\1&amp;startYear=$$2&amp;endYear=$$2&lt;/url&gt;" dest="3">
+        <RegExp conditional="!SearchAlt" input="$$1" output="&lt;url&gt;http://www.filmweb.pl/films/search?endYear=$$2&amp;q=\1&amp;startYear=$$2&lt;/url&gt;" dest="3">
             <expression />
         </RegExp>
 		<!-- Alternatywna wyszukiwarka !-->
@@ -34,8 +34,8 @@
     <!-- Tworzy adresy URL dla znalezionych pozycji !-->
     <GetSearchResults dest="8">
         <RegExp input="$$5" output="&lt;results sorted=&quot;yes&quot;&gt;\1&lt;/results&gt;" dest="8">
-			<RegExp conditional="!SearchAlt" input="$$1" output="&lt;entity&gt;&lt;title&gt;\2\6\8\6\7&lt;/title&gt;&lt;year&gt;\3&lt;/year&gt;&lt;url&gt;http://www.filmweb.pl\1&lt;/url&gt;&lt;/entity&gt;" dest="5">
-				<expression noclean="6" repeat="yes" fixchars="2,7" trim="2,7">filmPreview__link&quot; href=&quot;([^&quot;]+)&quot;[^-]+filmPreview__title&quot;&gt;([^&lt;]+)&lt;[^-]+filmPreview__year&quot;&gt;([0-9]+)&lt;(([^-]+div(.)class=&quot;filmPreview__originalTitle&quot;&gt;([^&lt;]+)&lt;(/))?)</expression>
+			<RegExp conditional="!SearchAlt" input="$$1" output="&lt;entity&gt;&lt;title&gt;\2\4\6\4\5&lt;/title&gt;&lt;year&gt;\7&lt;/year&gt;&lt;url&gt;http://www.filmweb.pl\1&lt;/url&gt;&lt;/entity&gt;" dest="5">
+				<expression noclean="4,6" repeat="yes" fixchars="2,5" trim="2,5">filmPreview__link&quot; href=&quot;([^&quot;]+).*?filmPreview__title&quot;&gt;([^&lt;]+)&lt;.*?&lt;\/div&gt;&lt;(div(\s)class=&quot;filmPreview__originalTitle&quot;&gt;([^&lt;]+)&lt;(\/))?.*?filmPreview__year&quot;&gt;([0-9]+)&lt;</expression>
 			</RegExp>
 			<!-- Alternatywna wyszukiwarka !-->
 			<RegExp conditional="SearchAlt" input="$$1" output="&lt;entity&gt;&lt;title&gt;\3 / \2&lt;/title&gt;&lt;year&gt;\4&lt;/year&gt;&lt;url&gt;http://www.filmweb.pl/Film?id=\1&lt;/url&gt;&lt;/entity&gt;" dest="5">
@@ -313,7 +313,7 @@
                     <RegExp input="$$1" output="\1" dest="7">
                         <expression noclean="1" clear="yes">actors&quot;&gt;Obsada(.*?)&lt;\/section&gt;</expression>
                     </RegExp>  
-                    <expression repeat="yes" fixchars="3,4" trim="4">(data-src=&quot;([^&quot;]+)&quot;[^&lt;]+&lt;[^&lt;]+&lt;|class=&quot;imageTitle&quot;)[^&lt;]+&lt;[^&lt;]+&gt;([^&gt;]+)&lt;.*?data-role-source&gt;(.*?)&lt;\/a&gt;</expression>
+                    <expression repeat="yes" fixchars="3,4" trim="4">(data-src=&quot;([^&quot;]+)&quot;[^&lt;]+&lt;[^&lt;]+&lt;|class=&quot;imageTitle&quot;)[^&lt;]+&lt;[^&lt;]+&gt;([^&gt;]+)&lt;.*?alternateName&quot;&gt;(.*?)&lt;\/span&gt;</expression>
                 </RegExp>
                 <RegExp input="" conditional="GetFullActors" output="&lt;url function=&quot;AKTORZY&quot;&gt;$$11/cast/actors&lt;/url&gt;" dest="6">
                     <expression/>
