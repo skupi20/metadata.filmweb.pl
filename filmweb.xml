@@ -35,7 +35,7 @@
     <GetSearchResults dest="8">
         <RegExp input="$$5" output="&lt;results sorted=&quot;yes&quot;&gt;\1&lt;/results&gt;" dest="8">
 			<RegExp conditional="!SearchAlt" input="$$1" output="&lt;entity&gt;&lt;title&gt;\2\4\6\4\5&lt;/title&gt;&lt;year&gt;\7&lt;/year&gt;&lt;url&gt;http://www.filmweb.pl\1&lt;/url&gt;&lt;/entity&gt;" dest="5">
-				<expression noclean="4,6" repeat="yes" fixchars="2,5" trim="2,5">filmPreview__link&quot; href=&quot;([^&quot;]+).*?filmPreview__title&quot;&gt;([^&lt;]+)&lt;.*?&lt;\/div&gt;&lt;(div(\s)class=&quot;filmPreview__originalTitle&quot;&gt;([^&lt;]+)&lt;(\/))?.*?filmPreview__year&quot;&gt;([0-9]+)&lt;</expression>
+				<expression noclean="4,6" repeat="yes" fixchars="2,5" trim="2,5">filmPreview__link&quot; href=&quot;([^&quot;]+)&quot;.*?filmPreview__title&quot;.*?&gt;([^&lt;]+)&lt;([^-]+div(.)class=&quot;filmPreview__originalTitle&quot;&gt;([^&lt;]+)&lt;(\/))?.*?filmPreview__year&quot;.*?&gt;([0-9]+)&lt;</expression>
 			</RegExp>
 			<!-- Alternatywna wyszukiwarka !-->
 			<RegExp conditional="SearchAlt" input="$$1" output="&lt;entity&gt;&lt;title&gt;\3 / \2&lt;/title&gt;&lt;year&gt;\4&lt;/year&gt;&lt;url&gt;http://www.filmweb.pl/Film?id=\1&lt;/url&gt;&lt;/entity&gt;" dest="5">
