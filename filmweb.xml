@@ -311,7 +311,7 @@
                 <!-- FILMWEB ACTORS  !-->
                 <RegExp input="$$7" conditional="!GetFullActors" output="&lt;actor&gt;&lt;thumb&gt;\2&lt;/thumb&gt;&lt;name&gt;\3&lt;/name&gt;&lt;role&gt;\4&lt;/role&gt;&lt;/actor&gt;" dest="6">
                     <RegExp input="$$1" output="\1" dest="7">
-                        <expression noclean="1" clear="yes">actors&quot;&gt;Obsada(.*?)&lt;\/section&gt;</expression>
+                        <expression noclean="1" clear="yes">actors&quot;&gt;&lt;h2&gt;Obsada(.*?)&lt;\/section&gt;</expression>
                     </RegExp>  
                     <expression repeat="yes" fixchars="3,4" trim="4">(data-src=&quot;([^&quot;]+)&quot;[^&lt;]+&lt;[^&lt;]+&lt;|class=&quot;imageTitle&quot;)[^&lt;]+&lt;[^&lt;]+&gt;([^&gt;]+)&lt;.*?alternateName&quot;&gt;(.*?)&lt;\/span&gt;</expression>
                 </RegExp>
