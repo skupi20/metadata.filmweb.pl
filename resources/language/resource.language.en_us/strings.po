@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30001"
+msgid "Get Trailer"
+msgstr "Get Trailer"
+
+msgctxt "#30002"
+msgid "Get full Cast from Filmweb"
+msgstr "Get full Cast from Filmweb"
+
+msgctxt "#30004"
+msgid "Use Original Title"
+msgstr "Use Original Title"
+
+msgctxt "#30005"
+msgid "Additional thumbs from TMDb"
+msgstr "Additional thumbs from TMDb"
+
+msgctxt "#30006"
+msgid "Additional thumbs from Filmweb"
+msgstr "Additional thumbs from Filmweb"
+
+msgctxt "#30011"
+msgid "Search all NFO's"
+msgstr "Search all NFO's"
+
+msgctxt "#30012"
+msgid "Alternative search engine"
+msgstr "Alternative search engine"

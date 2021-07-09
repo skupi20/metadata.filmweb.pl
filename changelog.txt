@@ -1,3 +1,5 @@
+[B]2.4.7[/B]
+- Poprawka: dopasowanie do nowych standarów KODI
 [B]2.4.6[/B]
 - Poprawka: wyszukiwarka Filmweb
 [B]2.4.5[/B]
