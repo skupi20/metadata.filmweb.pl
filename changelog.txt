@@ -1,3 +1,8 @@
+[B]2.4.8[/B]
+- Poprawka: plakat, fanart z Filmweb
+- Poprawka: studio, kraj produkcji, gatunek, ilość głosów z Filmweb
+- Poprawka: opis, skrócony opis oraz hasło z Filmweb
+- Dodano: pobiera dodatkowy plakat z USA dla filmu z Filmweb
 [B]2.4.7[/B]
 - Poprawka: dopasowanie do nowych standardów KODI
 [B]2.4.6[/B]

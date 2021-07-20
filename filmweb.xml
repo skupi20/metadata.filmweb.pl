@@ -202,7 +202,7 @@
                 <expression noclean="1">(.+)</expression>
                 <!-- FILMWEB GENRES !-->
                 <RegExp input="$$1" output="&lt;genre&gt;\1&lt;/genre&gt;" dest="6">
-                    <expression repeat="yes" fixchars="1">genres=\d+&quot;&gt;([^&lt;]+)&lt;</expression>
+                    <expression repeat="yes" fixchars="1">itemprop=&quot;genre&quot;&gt;(.*?)produkcja</expression>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
             </RegExp>
@@ -216,11 +216,8 @@
                 <!-- FILMWEB TAGLINE !-->
                 <RegExp input="$$7" output="&lt;tagline&gt;\1&lt;/tagline&gt;" dest="6">
                     <RegExp input="$$1" output="\1" dest="7">
-                        <expression clear="yes" fixchars="1">review__title[^&gt;]+&gt;[^&gt;]+&gt;([^&lt;]+)&lt;</expression>
+                        <expression clear="yes" fixchars="1">reviewBox__title[^&gt;]+&gt; &lt;span&gt;([^&lt;]+)&lt;\/span</expression>
                     </RegExp>                    
-                    <RegExp input="$$1" output="\1" dest="7">
-                        <expression fixchars="1">reviewBox__title[^&gt;]+&gt;([^&lt;]+)&lt;</expression>
-                    </RegExp>
                     <expression>(.+)</expression>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
@@ -247,7 +244,7 @@
                 </RegExp>
                 <!-- FILMWEB VOTES !-->
                 <RegExp input="$$1" output="&lt;votes&gt;\1&lt;/votes&gt;" dest="6">
-                    <expression>data-count=&quot;(.*?)&quot; dataRating</expression>
+                    <expression>data-count=&quot;(.*?)&quot; datarating-rate</expression>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
             </RegExp>
@@ -255,7 +252,7 @@
             <!-- OUTLINE !-->
             <RegExp input="$$6" output="\1" dest="5+">
                 <RegExp input="$$1" output="&lt;outline&gt;\1&lt;/outline&gt;" dest="6">
-                    <expression fixchars="1" clear="yes">filmPosterSection__plot&quot; itemprop=&quot;description&quot;&gt;([^&lt;]+)&lt;</expression>
+                    <expression fixchars="1" clear="yes">filmPosterSection__plot clamped&quot;&gt;&lt;span itemprop=&quot;description&quot;&gt;([^&lt;]+)&lt;</expression>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
             </RegExp>
@@ -268,7 +265,7 @@
                 </RegExp>
                 <!-- FILMWEB COUNTRY !-->
                 <RegExp input="$$1" output="&lt;country&gt;\1&lt;/country&gt;" dest="6">
-                    <expression repeat="yes" fixchars="1">countries=\d+&quot;&gt;([^&lt;]+)&lt;</expression>
+                    <expression fixchars="1">produkcja(.*?)premiera</expression>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
             </RegExp>
@@ -277,27 +274,30 @@
             <RegExp input="$$6" output="\1" dest="5+">
                 <!-- FILMWEB STUDIO !--> 
                 <RegExp input="$$1" output="&lt;studio&gt;\1&lt;/studio&gt;" dest="6">
-                    <expression fixchars="1" clear="yes">header&quot;&gt;studio[^&gt;]+&gt;[^&gt;]+filmInfo__info&quot;&gt;([^&lt;]+)&lt;</expression>
+                    <expression fixchars="1" clear="yes">studio(.*?)data produkcji</expression>
+                </RegExp>
+                <RegExp input="$$1" output="&lt;studio&gt;\1&lt;/studio&gt;" dest="6">
+                    <expression fixchars="1">studio(.*?) \/ &lt;a.*?Więcej.*?data produkcji</expression>
                 </RegExp>
                 <!-- TMDB STUDIO !-->
                 <RegExp input="$$18" output="&lt;chain function=&quot;GetTMDBStudioByIdChain&quot;&gt;\1::$INFO[language]&lt;/chain&gt;" dest="6">
                     <expression clear="yes">(.+)</expression>
-                </RegExp>
+                </RegExp>                
                 <expression noclean="1">(.+)</expression>
             </RegExp>
             
             <!-- PLOT !-->
             <RegExp input="$$6" output="\1" dest="5+">
                 <!-- TMDB PLOT !-->
-                <RegExp input="$$18" output="&lt;chain function=&quot;GetTMDBPlotByIdChain&quot;&gt;\1::pl&lt;/chain&gt;" dest="6">
+                <RegExp input="$$18" output="&lt;chain function=&quot;GetTMDBPlotByIdChain&quot;&gt;\1::$INFO[language]&lt;/chain&gt;" dest="6">
                     <expression clear="yes">(.+)</expression>
                 </RegExp>
                 <!-- FILMWEB PLOT !-->
                 <RegExp input="$$1" output="&lt;plot&gt;\1&lt;/plot&gt;" dest="6">
-                    <expression fixchars="1">class=&quot;filmDescriptionSection__text&quot;&gt;([^&lt;]+)&lt;</expression>
+                    <expression fixchars="1">descriptionSection__text&quot;&gt;([^&lt;]+)&lt;</expression>
                 </RegExp>
                 <RegExp input="$$1" output="&lt;plot&gt;\1&lt;/plot&gt;" dest="6">
-                    <expression fixchars="1">class=&quot;filmDescriptionSection__moreText hide&quot;&gt;([^&lt;]+)&lt;</expression>
+                    <expression fixchars="1">descriptionSection__moreText hide&quot;&gt;([^&lt;]+)&lt;</expression>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
             </RegExp>
@@ -324,7 +324,7 @@
             <!-- THUMB !-->
             <RegExp input="$$6" output="\1" dest="5+">
                 <!-- TMDB THUMB !-->
-                <RegExp input="$$18" output="&lt;chain function=&quot;GetTMDBThumbsByIdChain&quot;&gt;\1::pl&lt;/chain&gt;" dest="6">
+                <RegExp input="$$18" output="&lt;chain function=&quot;GetTMDBThumbsByIdChain&quot;&gt;\1::$INFO[language]&lt;/chain&gt;" dest="6">
                     <expression clear="yes">(.+)</expression>
                 </RegExp>
                 <!-- FILMWEB THUMB !-->
@@ -346,18 +346,18 @@
             <!-- FANART !-->
             <RegExp input="$$6" output="\1" dest="5+">
                 <!-- TMDB FANART !-->
-                <RegExp input="$$18" output="&lt;chain function=&quot;GetTMDBFanartByIdChain&quot;&gt;\1::pl&lt;/chain&gt;" dest="6">
+                <RegExp input="$$18" output="&lt;chain function=&quot;GetTMDBFanartByIdChain&quot;&gt;\1::$INFO[language]&lt;/chain&gt;" dest="6">
                     <expression clear="yes">(.+)</expression>
                 </RegExp>
                 <!-- FILMWEB FANART !-->
-                <RegExp input="" output="&lt;url function=&quot;FANART&quot; cache=&quot;filmweb-$$20&quot;&gt;http://www.filmweb.pl/Film?id=$$20&lt;/url&gt;" dest="6+">
+                <RegExp input="" output="&lt;url function=&quot;FANART&quot;&gt;$$11/photos&lt;/url&gt;" dest="6+">
                     <expression/>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
             </RegExp> 
             
             <!-- SETS !-->
-            <RegExp input="$$18" output="&lt;chain function=&quot;GetTMDBSetByIdChain&quot;&gt;\1::pl&lt;/chain&gt;" dest="5+">
+            <RegExp input="$$18" output="&lt;chain function=&quot;GetTMDBSetByIdChain&quot;&gt;\1::$INFO[language]&lt;/chain&gt;" dest="5+">
                 <expression>(.+)</expression>
             </RegExp>
             
@@ -382,13 +382,17 @@
         <RegExp input="$$1" output="&lt;details&gt;&lt;fanart&gt;&lt;thumb preview=&quot;\13\2&quot;&gt;\11\2&lt;/thumb&gt;&lt;/fanart&gt;&lt;/details&gt;" dest="3">
             <expression clear="yes">gallery__container&quot;.*?data-src=&quot;([^\.]+\.[^\.]+\.)\d([^&quot;]+)&quot;</expression>
         </RegExp>
+        <expression noclean="1">(.+)</expression>
     </FANART>
     
     <!-- Funkcja dodaje dodatkowe plakaty z Filmweb  !-->
     <PLAKAT clearbuffers="no" dest="3">
         <RegExp input="$$7" output="&lt;details&gt;\1&lt;/details&gt;" dest="3">
             <RegExp input="$$1" output="&lt;thumb aspect=&quot;poster&quot; preview=&quot;\12\2&quot;&gt;\13\2&lt;/thumb&gt;" dest="7">
-                <expression repeat="yes" clear="yes">data-country=pl.*?simplePoster__image&quot;.*?data-src=&quot;([^\.]+\.[^\.]+\.)\d([^&quot;]+)&quot;</expression>
+                <expression >data-country=&quot;PL&quot;.*?simplePoster__image&quot;.*?data-src=&quot;([^\.]+\.[^\.]+\.)\d([^&quot;]+)&quot;</expression>
+            </RegExp>
+            <RegExp input="$$1" output="&lt;thumb aspect=&quot;poster&quot; preview=&quot;\12\2&quot;&gt;\13\2&lt;/thumb&gt;" dest="7+">
+                <expression >data-country=&quot;US&quot;.*?simplePoster__image&quot;.*?data-src=&quot;([^\.]+\.[^\.]+\.)\d([^&quot;]+)&quot;</expression>
             </RegExp>
             <expression noclean="1">(.+)</expression>
         </RegExp>
