@@ -274,14 +274,14 @@
             <RegExp input="$$6" output="\1" dest="5+">
                 <!-- FILMWEB STUDIO !--> 
                 <RegExp input="$$1" output="&lt;studio&gt;\1&lt;/studio&gt;" dest="6">
-                    <expression fixchars="1" clear="yes">studio(.*?)data produkcji</expression>
+                    <expression fixchars="1">studio(.*?)data produkcji</expression>
                 </RegExp>
                 <RegExp input="$$1" output="&lt;studio&gt;\1&lt;/studio&gt;" dest="6">
                     <expression fixchars="1">studio(.*?) \/ &lt;a.*?Więcej.*?data produkcji</expression>
                 </RegExp>
                 <!-- TMDB STUDIO !-->
                 <RegExp input="$$18" output="&lt;chain function=&quot;GetTMDBStudioByIdChain&quot;&gt;\1::$INFO[language]&lt;/chain&gt;" dest="6">
-                    <expression clear="yes">(.+)</expression>
+                    <expression>(.+)</expression>
                 </RegExp>                
                 <expression noclean="1">(.+)</expression>
             </RegExp>
