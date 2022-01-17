@@ -24,6 +24,14 @@ msgctxt "#30006"
 msgid "Additional thumbs from Filmweb"
 msgstr "Pobiera dodatkowe plakaty z Filmweb"
 
+msgctxt "#30007"
+msgid "Get Studio from TMDB"
+msgstr "Pobieraj wytwórnie z TMDB"
+
+msgctxt "#30008"
+msgid "Get Genre from TMDB"
+msgstr "Pobieraj gatunki z TMDB"
+
 msgctxt "#30011"
 msgid "Search all NFO's"
 msgstr "Przeszukaj wszystkie pliki NFO"
