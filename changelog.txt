@@ -1,3 +1,9 @@
+[B]2.5.0[/B]
+- Poprawka: Id Filmweb
+- Poprawka: tytuł Filmweb
+- Poprawka: oryginalny tytuł Filmweb
+- Poprawka: rok wydania Filmweb
+- Poprawka: trailer Filmweb
 [B]2.4.9[/B]
 - Dodano: wybór gatunku z TMDb albo Filmweb
 - Dodano: wybór wytwórni z TMDb albo Filmweb
