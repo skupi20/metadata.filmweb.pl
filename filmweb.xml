@@ -293,9 +293,6 @@
                 </RegExp>
                 <!-- FILMWEB PLOT !-->
                 <RegExp input="$$1" output="&lt;plot&gt;\1&lt;/plot&gt;" dest="6">
-                    <expression fixchars="1" clear="yes">filmPosterSection__plot clamped&quot;&gt;&lt;span itemprop=&quot;description&quot;&gt;([^&lt;]+)&lt;</expression>
-                </RegExp>
-                <RegExp input="$$1" output="&lt;plot&gt;\1&lt;/plot&gt;" dest="6">
                     <expression fixchars="1">descriptionSection__text&quot;&gt;([^&lt;]+)&lt;</expression>
                 </RegExp>
                 <RegExp input="$$1" output="&lt;plot&gt;\1&lt;/plot&gt;" dest="6">
