@@ -72,7 +72,7 @@
                 </RegExp>
                 <RegExp input="$$1" output="\1" dest="17">
                     <expression fixchars="1">fP__title &quot;&gt;([^&lt;]+)&lt;</expression>
-                </RegExp>                
+                </RegExp>
                 <RegExp conditional="!UseOriginalTitle" input="$$17" output="&lt;title&gt;\1&lt;/title&gt;" dest="6">
                     <expression />
                 </RegExp>
@@ -293,6 +293,9 @@
                 </RegExp>
                 <!-- FILMWEB PLOT !-->
                 <RegExp input="$$1" output="&lt;plot&gt;\1&lt;/plot&gt;" dest="6">
+                    <expression fixchars="1" clear="yes">filmPosterSection__plot clamped&quot;&gt;&lt;span itemprop=&quot;description&quot;&gt;([^&lt;]+)&lt;</expression>
+                </RegExp>
+                <RegExp input="$$1" output="&lt;plot&gt;\1&lt;/plot&gt;" dest="6">
                     <expression fixchars="1">descriptionSection__text&quot;&gt;([^&lt;]+)&lt;</expression>
                 </RegExp>
                 <RegExp input="$$1" output="&lt;plot&gt;\1&lt;/plot&gt;" dest="6">
@@ -390,7 +393,7 @@
             <RegExp input="$$1" output="&lt;thumb aspect=&quot;poster&quot; preview=&quot;\12\2&quot;&gt;\13\2&lt;/thumb&gt;" dest="7">
                 <expression >data-country=&quot;PL&quot;.*?simplePoster__image&quot;.*?data-src=&quot;([^\.]+\.[^\.]+\.)\d([^&quot;]+)&quot;</expression>
             </RegExp>
-            <RegExp input="$$1" output="&lt;thumb aspect=&quot;poster&quot; preview=&quot;\12\2&quot;&gt;\13\2&lt;/thumb&gt;" dest="7+">
+            <RegExp input="$$1" output="&lt;thumb aspect=&quot;poster&quot; preview=&quot;\12\2&quot;&gt;\13\2&lt;/thumb&gt;" dest="7">
                 <expression >data-country=&quot;US&quot;.*?simplePoster__image&quot;.*?data-src=&quot;([^\.]+\.[^\.]+\.)\d([^&quot;]+)&quot;</expression>
             </RegExp>
             <expression noclean="1">(.+)</expression>
