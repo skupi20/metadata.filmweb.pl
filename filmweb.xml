@@ -68,10 +68,10 @@
             <!-- TITLE !-->
             <RegExp input="$$6" output="\1" dest="5+">
                 <RegExp input="$$1" output="\1" dest="17">
-                    <expression fixchars="1">fP__title--large&quot; itemprop=&quot;name&quot;&gt;([^&lt;]+)&lt;</expression>
+                    <expression fixchars="1">filmCoverSection__title--large&quot; itemprop=&quot;name&quot;&gt;([^&lt;]+)&lt;</expression>
                 </RegExp>
                 <RegExp input="$$1" output="\1" dest="17">
-                    <expression fixchars="1">fP__title &quot; itemprop=&quot;name&quot;&gt;([^&lt;]+)&lt;</expression>
+                    <expression fixchars="1">filmCoverSection__title &quot; itemprop=&quot;name&quot;&gt;([^&lt;]+)&lt;</expression>
                 </RegExp>
                 <RegExp conditional="!UseOriginalTitle" input="$$17" output="&lt;title&gt;\1&lt;/title&gt;" dest="6">
                     <expression />
@@ -88,7 +88,7 @@
                     <expression />
                 </RegExp>
                 <RegExp input="$$1" output="\1" dest="16">
-                    <expression fixchars="1">fP__originalTitle&quot;&gt;([^&lt;]+)&lt;</expression>
+                    <expression fixchars="1">filmCoverSection__originalTitle&quot;&gt;([^&lt;]+)&lt;</expression>
                 </RegExp>
                 <RegExp conditional="!UseOriginalTitle" input="$$16" output="&lt;originaltitle&gt;\1&lt;/originaltitle&gt;" dest="6">
                     <expression />
@@ -102,7 +102,7 @@
             <!-- YEAR !-->
             <RegExp input="$$15" output="&lt;year&gt;\1&lt;/year&gt;" dest="5+">
                 <RegExp input="$$1" output="\1" dest="15">
-                    <expression>fP__year&quot; itemprop=&quot;datePublished&quot; content=&quot;([0-9]+)&quot;</expression>
+                    <expression>filmCoverSection__year&quot;&gt;([0-9]+)&lt;</expression>
                 </RegExp>
                 <expression />
             </RegExp>

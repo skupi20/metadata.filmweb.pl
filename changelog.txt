@@ -1,3 +1,7 @@
+[B]2.5.2[/B]
+- Poprawka: tytuł Filmweb
+- Poprawka: oryginalny tytuł Filmweb
+- Poprawka: rok wydania Filmweb
 [B]2.5.1[/B]
 - Poprawka: tytuł Filmweb
 [B]2.5.0[/B]
