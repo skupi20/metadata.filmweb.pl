@@ -267,7 +267,7 @@
                 </RegExp>
                 <!-- FILMWEB COUNTRY !-->
                 <RegExp input="$$1" output="&lt;country&gt;\1&lt;/country&gt;" dest="6">
-                    <expression fixchars="1">produkcja(.*?)premiera</expression>
+                    <expression fixchars="1">produkcja(.*?)(premiera|oceń twórców)</expression>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
             </RegExp>
