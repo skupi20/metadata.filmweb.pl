@@ -104,6 +104,9 @@
                 <RegExp input="$$1" output="\1" dest="15">
                     <expression>filmCoverSection__year&quot;&gt;([0-9]+)&lt;</expression>
                 </RegExp>
+                <RegExp input="$$1" output="\1" dest="15">
+                    <expression>sasKeywordAdd\(&quot;filmYear&quot;,&quot;([0-9]+)&quot;\)</expression>
+                </RegExp>
                 <expression />
             </RegExp>
             
@@ -267,7 +270,7 @@
                 </RegExp>
                 <!-- FILMWEB COUNTRY !-->
                 <RegExp input="$$1" output="&lt;country&gt;\1&lt;/country&gt;" dest="6">
-                    <expression fixchars="1">produkcja(.*?)premiera</expression>
+                    <expression fixchars="1">produkcja[^&gt;]+&gt;[^&gt;]+>[^&gt;]+>[^&gt;]+>([^&lt;]+)&lt;</expression>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
             </RegExp>
