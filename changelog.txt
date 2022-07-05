@@ -1,3 +1,9 @@
+[B]2.5.3[/B]
+- Poprawka: lista wyszukiwania Filmweb
+- Poprawka: obsada Filmweb
+- Poprawka: fanart Filmweb
+- Poprawka: plakaty Filmweb
+- Poprawka: kraj Filmweb
 [B]2.5.2[/B]
 - Poprawka: tytuł Filmweb
 - Poprawka: oryginalny tytuł Filmweb
