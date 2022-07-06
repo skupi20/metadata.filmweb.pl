@@ -315,7 +315,7 @@
                     <RegExp input="$$1" output="\1" dest="7">
                         <expression noclean="1" clear="yes">actors&quot;&gt;&lt;h2&gt;Obsada(.*?)&lt;\/section&gt;</expression>
                     </RegExp>  
-                    <expression repeat="yes" fixchars="5,6,7">(data-image=&quot;([^\.]+\.[^\.]+\.)\d([^&quot;]+)&quot;|data-image=&quot;&quot;).*?(simplePoster__heading&quot; itemprop=&quot;name&quot;&gt;([^&lt;]+)&lt;\/h3&gt;&lt;\/a&gt;&lt;\/div&gt;&lt;\/div&gt;|simplePoster__heading&quot; itemprop=&quot;name&quot;&gt;([^&lt;]+)&lt;.*?alternateName&quot;&gt;(.*?)&lt;\/span&gt;&lt;\/div&gt;&lt;\/div&gt;)</expression>
+                    <expression repeat="yes" fixchars="5,6,7">(data-image=&quot;([^\.]+\.[^\.]+\.)\d([^&quot;]+)&quot;|data-image=&quot;&quot;).*?(simplePoster__heading&quot; itemprop=&quot;name&quot;&gt;([^&lt;]+)&lt;\/h3&gt;&lt;\/a&gt;&lt;\/div&gt;&lt;\/div&gt;|simplePoster__heading&quot; itemprop=&quot;name&quot;&gt;([^&lt;]+)&lt;.*?alternateName&quot;&gt;(.*?)&lt;div class)</expression>
                 </RegExp>
                 <RegExp input="" conditional="GetFullActors" output="&lt;url function=&quot;AKTORZY&quot;&gt;$$11/cast/actors&lt;/url&gt;" dest="6">
                     <expression/>
