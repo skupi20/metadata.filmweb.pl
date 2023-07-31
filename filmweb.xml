@@ -270,7 +270,7 @@
                 </RegExp>
                 <!-- FILMWEB COUNTRY !-->
                 <RegExp input="$$1" output="&lt;country&gt;\1&lt;/country&gt;" dest="6">
-                    <expression fixchars="1">sasKeywordAdd\(&quot;c&quot;,&quot;([^&quot;]+)&quot;</expression>
+                    <expression repeat="yes" fixchars="1">sasKeywordAdd\(&quot;c&quot;,&quot;([^&quot;]+)&quot;</expression>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
             </RegExp>
@@ -283,7 +283,7 @@
                 </RegExp>
                 <!-- FILMWEB STUDIO !--> 
                 <RegExp input="$$1" conditional="!GetAlwaysTMDbStudio" output="&lt;studio&gt;\1&lt;/studio&gt;" dest="6">
-                    <expression fixchars="1">sasKeywordAdd\(&quot;s&quot;,&quot;([^&quot;]+)&quot;</expression>
+                    <expression repeat="yes" fixchars="1">sasKeywordAdd\(&quot;s&quot;,&quot;([^&quot;]+)&quot;</expression>
                 </RegExp>
                 <expression noclean="1">(.+)</expression>
             </RegExp>
