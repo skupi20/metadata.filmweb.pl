@@ -1,3 +1,7 @@
+[B]2.5.4[/B]
+- Poprawka: kraj Filmweb
+- Poprawka: studio Filmweb
+- Poprawka: obsada Filmweb
 [B]2.5.3[/B]
 - Poprawka: lista wyszukiwania Filmweb
 - Poprawka: obsada Filmweb
