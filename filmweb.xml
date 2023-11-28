@@ -404,7 +404,7 @@
     <AKTORZY clearbuffers="no" dest="3">
         <RegExp input="$$7" output="&lt;details&gt;\1&lt;/details&gt;" dest="3">
             <RegExp input="$$1" output="&lt;actor&gt;&lt;thumb&gt;\21\3&lt;/thumb&gt;&lt;name&gt;\4&lt;/name&gt;&lt;role&gt;\5&lt;/role&gt;&lt;/actor&gt;" dest="7">
-                <expression repeat="yes" clear="yes" trim="5" fixchars="4,5">(data-src=&quot;([^\.]+\.[^\.]+\.)\d([^&quot;]+)&quot; alt=&quot;&quot;|src=&quot;[^&quot;]+&quot; alt=&quot;&quot;)[^&lt;]+&lt;[^&lt;]+&lt;[^&lt;]+&lt;[^&lt;]+&lt;[^&lt;]+&lt;[^&gt;]+&gt;([^&lt;]+)&lt;\/a&gt; ([^\.]+?)&lt;\/div</expression>
+                <expression repeat="yes" clear="yes" trim="5" fixchars="4,5">(src=&quot;([^\.]+\.[^\.]+\.)\d([^&quot;]+)&quot; +alt=&quot;&quot;|src=&quot;[^&quot;]+&quot; alt=&quot;&quot;)[^&lt;]+&lt;[^&lt;]+&lt;[^&lt;]+&lt;[^&lt;]+&lt;[^&lt;]+&lt;[^&gt;]+&gt;([^&lt;]+)&lt;\/a&gt;[^&lt;]*&lt;span[^&gt;]+&gt;([^\.]+?)&lt;\/span</expression>
             </RegExp>
             <expression noclean="1">(.+)</expression>
         </RegExp>
