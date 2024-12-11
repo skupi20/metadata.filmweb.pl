@@ -1,3 +1,6 @@
+[B]2.5.6[/B]
+- Poprawka: dodatkowe plakaty Filmweb
+- Poprawka: dla wyszukiwania filmów dodano dodatkowy warunek powyżej 10 ocen
 [B]2.5.5[/B]
 - Poprawka: obsada Filmweb
 - Poprawka: plakaty Filmweb

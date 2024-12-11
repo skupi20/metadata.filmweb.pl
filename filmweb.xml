@@ -22,7 +22,7 @@
     
     <!-- Tworzy adres URL wyszukiwania !-->
     <CreateSearchUrl dest="3">
-        <RegExp conditional="!SearchAlt" input="$$1" output="&lt;url&gt;http://www.filmweb.pl/films/search?endYear=$$2&amp;q=\1&amp;startYear=$$2&lt;/url&gt;" dest="3">
+        <RegExp conditional="!SearchAlt" input="$$1" output="&lt;url&gt;http://www.filmweb.pl/films/search?endYear=$$2&amp;q=\1&amp;startYear=$$2&amp;startCount=10&lt;/url&gt;" dest="3">
             <expression />
         </RegExp>
 		<!-- Alternatywna wyszukiwarka !-->
@@ -390,10 +390,10 @@
     <!-- Funkcja dodaje dodatkowe plakaty z Filmweb  !-->
     <PLAKAT clearbuffers="no" dest="3">
         <RegExp input="$$7" output="&lt;details&gt;\1&lt;/details&gt;" dest="3">
-            <RegExp input="$$1" output="&lt;thumb aspect=&quot;poster&quot; preview=&quot;\12\2&quot;&gt;\13\2&lt;/thumb&gt;" dest="7">
+            <RegExp input="$$1" output="&lt;thumb aspect=&quot;poster&quot; preview=&quot;\12.jpg&quot;&gt;\13.jpg&lt;/thumb&gt;" dest="7">
                 <expression repeat="yes">data-country=us.*?simplePoster__image&quot;.*?src=&quot;([^\.]+\.[^\.]+\.)\d([^&quot;]+)&quot;</expression>
             </RegExp>
-            <RegExp input="$$1" output="&lt;thumb aspect=&quot;poster&quot; preview=&quot;\12\2&quot;&gt;\13\2&lt;/thumb&gt;" dest="7">
+            <RegExp input="$$1" output="&lt;thumb aspect=&quot;poster&quot; preview=&quot;\12.jpg&quot;&gt;\13.jpg&lt;/thumb&gt;" dest="7">
                 <expression repeat="yes">data-country=pl.*?simplePoster__image&quot;.*?src=&quot;([^\.]+\.[^\.]+\.)\d([^&quot;]+)&quot;</expression>
             </RegExp>              
             <expression noclean="1">(.+)</expression>
