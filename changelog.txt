@@ -1,5 +1,10 @@
 [B]2.5.6[/B]
-- Poprawka: dodatkowe plakaty Filmweb
+- Poprawka: dodatkowe plakaty 
+- Poprawka: ocena oraz liczba głosów Filmweb
+- Poprawka: gatunki Filmweb
+- Poprawka: kraj Filmweb
+- Poprawka: studio Filmweb (pobierane jest tylko 1 z listy)
+- Poprawka: fanart Filmweb
 - Poprawka: dla wyszukiwania filmów dodano dodatkowy warunek powyżej 10 ocen
 [B]2.5.5[/B]
 - Poprawka: obsada Filmweb
